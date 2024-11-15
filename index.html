@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meest Shop</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="container header">
+            <div class="header-top">
+                <a
+                        href='/'
+                        class="logo"
+                        aria-label='Meest China Shop logo'
+                >
+                    <img src='./images/logo.svg' alt='Meest China Shop' />
+                </a>
+                <nav aria-label='Main navigation' class="main-navigation">
+                    <ul>
+                        <li>
+                            <a href='/shops'>Магазини</a>
+                        </li>
+                        <li>
+                            <a href='/how-to-order'>Як замовити</a>
+                        </li>
+                        <li>
+                            <a href='/loyalty-program'>Програма лояльності</a>
+                        </li>
+                        <li>
+                            <a href='/blog'>Блог</a>
+                        </li>
+                        <li>
+                            <a href='/help'>Допомога</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class='language-country-switcher'>
+                    <div
+                            class='language-switcher'
+                            role='group'
+                            aria-label='Language selection'
+                    >
+                        <a href='?lang=ua'>Ua</a>
+                        <a href='?lang=ru'>Ru</a>
+                    </div>
+                    <div
+                            class='country-switcher'
+                            role='group'
+                            aria-label='Country selection'
+                    >
+                        <button type='button' aria-label='Select Ukraine'>
+                            <img src='./images/flag_ua.svg' alt='Flag of Ukraine' />
+                            Ukraine
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <button type='button' aria-label='Catalog' class='catalog-button'>
+                    <img src='./images/catalog.svg' alt='' aria-hidden="true" />
+                    Каталог
+                </button>
+
+                <form action='/search' method='get' role='search' class="search-form">
+                    <label for='site-selector' class='visually-hidden'>
+                        Select site to search
+                    </label>
+                    <select id='site-selector' name='site'>
+                        <option value='taobao'>Taobao</option>
+                    </select>
+
+                    <button
+                            type='button'
+                            aria-label='Search by text'
+                            class='text-search-button'
+                    >
+                        <img src='./images/search.svg' alt='Search by text' />
+                    </button>
+
+                    <label for='search-input' class='visually-hidden'>
+                        Search
+                    </label>
+                    <input
+                            class="text-input"
+                            type='text'
+                            id='search-input'
+                            name='q'
+                            placeholder='Я шукаю...'
+                            aria-label='Search'
+                    />
+
+                    <button
+                            type='button'
+                            aria-label='Search by image'
+                            class='image-search-button'
+                    >
+                        <img src='./images/photo.svg' alt='Search by image' />
+                    </button>
+                </form>
+
+                <div class='user-actions'>
+                    <a
+                            href='/friend-pay'
+                            aria-label='Friend payment'
+                    >
+                        <img src='./images/friend-pay.svg' alt='Friend payment' />
+                    </a>
+                    <a
+                            href='/buyout-from-link'
+                            aria-label='Buyout from link'
+                    >
+                        <img src='./images/buyout-from-link.svg' alt='Buyout from link' />
+                    </a>
+                    <a
+                            href='/favorites'
+                            aria-label='Favorites'
+                    >
+                        <img src='images/favourites.svg' alt='Favourites' />
+                        <span class='badge'>10</span>
+                    </a>
+                    <a
+                            href='/cart'
+                            aria-label='Shopping cart'
+                    >
+                        <img src='./images/cart.svg' alt='User cabinet' />
+                        <span class='badge'>5</span>
+                    </a>
+                    <button
+                            type='button'
+                            aria-label='User menu'
+                            class='user-menu-button'
+                    >
+                        <img src='./images/user.svg' alt='User icon' />
+                    </button>
+                </div>
+            </div>
+    </header>
+</body>
+</html>

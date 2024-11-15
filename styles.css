@@ -1,0 +1,276 @@
+.container {
+    max-width: 1360px;
+    margin: auto;
+}
+
+.visually-hidden {
+    /*
+        Class for visually hiding elements while keeping them accessible
+        to screen readers and search engines. Useful for SEO and
+        assistive technologies.
+    */
+    position: absolute;
+    width: 1px; /* Ensures the element takes minimal space */
+    height: 1px; /* Ensures the element takes minimal space */
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Hides overflowing content */
+    clip: rect(0, 0, 0, 0); /* Hides content visually (legacy method) */
+    white-space: nowrap; /* Prevents wrapping for better accessibility */
+    border: 0;
+}
+
+.header {
+    --Primary-Black: #323232;
+    --Primary-Red: #E60033;
+    --Grey: #758295;
+    --Primary-Blue: #0061AF;
+    --Primary-White: #FFF;
+    --Stroke-Gray: #DBE4F0;
+
+    font-family: Montserrat, sans-serif;
+
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+
+    img {
+        display: block;
+    }
+
+    .header-top {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 20px;
+
+        .logo {
+            height: 44px;
+            width: 108px;
+        }
+
+        .main-navigation {
+            margin-right: auto;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: baseline;
+                gap: 32px;
+
+                li a {
+                    display: block;
+                    position: relative;
+                    padding: 8px;
+                    white-space: nowrap;
+                    text-decoration: none;
+                    color: var(--Primary-Black, #323232);
+
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px; /* 150% */
+                    transition: color 250ms ease;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: var(--Primary-Red, #E60033);
+                        scale: 0 1;
+                        transition: scale 250ms ease;
+                    }
+
+                    &:hover {
+                        color: var(--Primary-Red, #E60033);
+
+                        &::after {
+                            scale: 1 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .language-country-switcher {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+
+            .language-switcher {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                a {
+                    position: relative;
+                    color: var(--Grey, #758295);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px; /* 150% */
+
+                    &:nth-child(1) {
+                        color: var(--Primary-Blue, #0061AF);
+                    }
+
+                    &:nth-child(2)::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: -8px;
+                        transform: translateY(-50%);
+                        width: 1px;
+                        height: 12px;
+                        background-color: #DBE4F0;
+                    }
+                }
+            }
+
+            .country-switcher button {
+                outline: none;
+                border: none;
+                padding: 0;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                color: var(--Primary-Blue, #0061AF);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px; /* 150% */
+            }
+        }
+    }
+
+    .header-bottom {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .catalog-button {
+            border-radius: 16px;
+            background: var(--Primary-Blue, #0061AF);
+            outline: none;
+            border: none;
+            display: flex;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            color: var(--Primary-White, #FFF);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+        }
+
+        .search-form {
+            display: flex;
+            height: 48px;
+            width: 100%;
+            max-width: 600px;
+            align-items: center;
+            gap: 8px;
+            margin-right: auto;
+
+            border-radius: 16px;
+            border: 1px solid var(--Stroke-Gray, #DBE4F0);
+
+            .text-search-button {
+                outline: none;
+                border: none;
+                background-color: transparent;
+                height: 100%;
+                padding: 0;
+            }
+
+            .text-input {
+                outline: none;
+                border: none;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+
+                &::placeholder {
+                    color: var(--Grey, #758295);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 142.857% */
+                }
+            }
+
+            .image-search-button {
+                outline: none;
+                border: none;
+                background: transparent;
+                height: 100%;
+                padding: 0 24px 0 0;
+            }
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .user-menu-button {
+                outline: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                background-color: transparent;
+            }
+
+            & > a {
+                display: block;
+            }
+
+            .user-menu-button, & > a {
+                position: relative;
+                height: 48px;
+                width: 48px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & > .badge {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background: var(--Primary-Red, #E60033);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    overflow: hidden;
+                    color: var(--Primary-White, #FFF);
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 16px; /* 133.333% */
+                }
+            }
+        }
+    }
+}
