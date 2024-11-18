@@ -8,6 +8,7 @@ body {
 
     font-family: Montserrat, sans-serif;
     box-sizing: border-box;
+    color: var(--Primary-Black, #323232);
 }
 
 .container {
@@ -74,7 +75,6 @@ body {
                     padding: 8px;
                     white-space: nowrap;
                     text-decoration: none;
-                    color: var(--Primary-Black, #323232);
 
                     font-size: 16px;
                     font-style: normal;
@@ -282,7 +282,7 @@ body {
     }
 }
 
-.hero-section {
+.section-hero {
     margin-bottom: 48px;
 
     header {
@@ -293,7 +293,6 @@ body {
 
         h1 {
             flex: auto;
-            color: var(--Primary-Black, #323232);
             font-size: 60px;
             font-style: normal;
             font-weight: 600;
@@ -363,25 +362,25 @@ body {
                         flex-direction: column;
                         justify-content: flex-end;
 
-                            h2 {
-                                font-size: 40px;
-                                font-style: normal;
-                                font-weight: 600;
-                                line-height: 60px; /* 150% */
-                                letter-spacing: -0.8px;
-                                margin: 0;
-                            }
+                        h2 {
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 60px; /* 150% */
+                            letter-spacing: -0.8px;
+                            margin: 0;
+                        }
 
-                            p {
-                                font-size: 16px;
-                                font-style: normal;
-                                font-weight: 600;
-                                line-height: 28px; /* 175% */
-                                margin: 0;
-                                max-height: 0;
-                                overflow: hidden;
-                                transition: max-height 500ms ease-in-out;
-                            }
+                        p {
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 28px; /* 175% */
+                            margin: 0;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 500ms ease-in-out;
+                        }
                     }
 
                     &::after {
@@ -400,6 +399,47 @@ body {
                         backdrop-filter: blur(2px);
                     }
                 }
+            }
+        }
+    }
+}
+
+.section-benefits {
+    margin-bottom: 124px;
+
+    .benefits-list {
+        list-style: none;
+        margin: 0;
+        padding: 24px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 16px;
+        background: var(--Primary-White, #FFF);
+        box-shadow: 0 0 4px 0 rgba(7, 59, 102, 0.04), 0 0 20px 0 rgba(7, 59, 102, 0.06);
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            color: var(--Primary-Black, #323232);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+
+            strong {
+                color: var(--Primary-Blue, #0061AF);
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 36px; /* 128.571% */
             }
         }
     }
