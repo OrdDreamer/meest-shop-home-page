@@ -338,8 +338,8 @@ body {
                 display: block;
                 height: 100%;
 
-                &:hover figcaption > div {
-                    transform: translateY(0);
+                &:hover figcaption > p {
+                    max-height: 100%;
                 }
 
                 figure {
@@ -353,19 +353,15 @@ body {
                     }
 
                     figcaption {
+                        padding: 32px 108px 32px 32px;
                         position: absolute;
-                        top: 32px;
-                        left: 32px;
-                        height: calc(100% - 64px);
-                        width: calc(100% - 140px);
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
                         display: flex;
-                        align-items: flex-end;
-                        overflow: hidden;
-
-                        & > div {
-                            position: relative;
-                            transform: translateY(100%);
-                            transition: transform 250ms ease-in-out;
+                        flex-direction: column;
+                        justify-content: flex-end;
 
                             h2 {
                                 font-size: 40px;
@@ -374,8 +370,6 @@ body {
                                 line-height: 60px; /* 150% */
                                 letter-spacing: -0.8px;
                                 margin: 0;
-                                position: absolute;
-                                transform: translateY(-100%);
                             }
 
                             p {
@@ -384,10 +378,10 @@ body {
                                 font-weight: 600;
                                 line-height: 28px; /* 175% */
                                 margin: 0;
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: max-height 500ms ease-in-out;
                             }
-                        }
-
-
                     }
 
                     &::after {
