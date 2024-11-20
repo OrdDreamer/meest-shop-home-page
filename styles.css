@@ -199,6 +199,7 @@ body {
             border: 1px solid var(--Stroke-Gray, #DBE4F0);
 
             .text-search-button {
+                color: var(--Grey, #758295);
                 outline: none;
                 border: none;
                 background-color: transparent;
@@ -224,6 +225,7 @@ body {
             }
 
             .image-search-button {
+                color: var(--Primary-Blue, #0061AF);
                 outline: none;
                 border: none;
                 background: transparent;
@@ -250,9 +252,10 @@ body {
             }
 
             .user-menu-button, & > a {
+                color: var(--Primary-Blue, #0061AF);
                 position: relative;
-                height: 48px;
-                width: 48px;
+                /*height: 48px;*/
+                /*width: 48px;*/
 
                 display: flex;
                 justify-content: center;
@@ -386,17 +389,14 @@ body {
                         }
                     }
 
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 48px;
-                        height: 48px;
+                    & > svg {
+                        padding: 8px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         position: absolute;
                         bottom: 32px;
                         right: 32px;
-                        background-image: url('./images/carrier.svg');
-                        background-repeat: no-repeat;
-                        background-position: center;
                         border-radius: 16px;
                         border: 2px solid var(--Primary-White, #FFF);
                         backdrop-filter: blur(2px);
