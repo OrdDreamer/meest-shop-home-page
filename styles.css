@@ -5,6 +5,9 @@ body {
     --Primary-Blue: #0061AF;
     --Primary-White: #FFF;
     --Stroke-Gray: #DBE4F0;
+    --Light-blue: #F4F9FD;
+    --Hover-Blue: #468CC3;
+    --Background-blue: #CDE0EF;
 
     font-family: Montserrat, sans-serif;
     box-sizing: border-box;
@@ -443,4 +446,139 @@ body {
             }
         }
     }
+}
+
+.section-services {
+    h2 {
+        border-radius: 8px;
+        background: var(--Light-blue, #F4F9FD);
+        padding: 4px 8px;
+        width: auto;
+        margin: 0 0 8px;
+        max-width: max-content;
+
+        color: var(--Primary-Blue, #0061AF);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 142.857% */
+    }
+
+    & > header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 32px;
+        margin-bottom: 48px;
+
+        h3 {
+            color: var(--Primary-Black, #323232);
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 60px; /* 150% */
+            letter-spacing: -0.8px;
+            max-width: 550px;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            max-width: 440px;
+        }
+    }
+
+    & > figure {
+        img {
+            height: 484px;
+            width: 484px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+    }
+
+    & > ul {
+        display: grid;
+        grid-template-columns: 484px 1fr;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 32px 48px;
+
+        &::before {
+            content: "";
+            display: block;
+            grid-area: 1 / 1 / 4 / 2;
+            border-radius: 16px;
+            background: var(--Background-blue, #CDE0EF) url('images/services/main_image.png') center / cover no-repeat;
+        }
+
+        li {
+            grid-column: 2 / 3;
+
+
+            a {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                gap: 20px;
+                border-radius: 16px;
+                background: var(--Light-blue, #F4F9FD);
+                padding: 24px;
+                text-decoration: none;
+                color: var(--Primary-Black, #323232);
+                border: 1px solid var(--Light-blue, #F4F9FD);
+                transition: border 250ms ease, box-shadow 250ms ease;
+
+                article {
+                    grid-column: 2 / 3;
+                    h4 {
+                        margin: 0;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 28px; /* 140% */
+                        letter-spacing: -0.4px;
+                        transition: color 250ms ease;
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px; /* 175% */
+                        letter-spacing: -0.16px;
+                    }
+                }
+
+                & > svg:nth-child(1) {
+                    background: var(--Background-blue, #CDE0EF);
+                    padding: 12px;
+                    border-radius: 16px;
+                    color: var(--Primary-Blue, #0061AF)
+                }
+                & > svg:nth-child(3) {
+                    align-self: center;
+                    color: var(--Hover-Blue, #468CC3);
+                    transition: color 250ms ease;
+                }
+
+                &:hover {
+                    border: 1px solid var(--Hover-Blue, #468CC3);
+                    box-shadow: 0 0 4px 0 rgba(7, 59, 102, 0.04), 0 0 20px 0 rgba(7, 59, 102, 0.06);
+
+                    h4 {
+                        color: var(--Primary-Blue, #0061AF);
+                    }
+
+                    & > svg:nth-child(3) {
+                        color: var(--Primary-Blue, #0061AF);
+                    }
+                }
+            }
+        }
+    }
+
 }
