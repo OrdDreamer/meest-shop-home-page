@@ -449,6 +449,8 @@ body {
 }
 
 .section-services {
+    margin-bottom: 124px;
+
     h2 {
         border-radius: 8px;
         background: var(--Light-blue, #F4F9FD);
@@ -533,6 +535,7 @@ body {
 
                 article {
                     grid-column: 2 / 3;
+
                     h4 {
                         margin: 0;
                         font-size: 20px;
@@ -559,6 +562,7 @@ body {
                     border-radius: 16px;
                     color: var(--Primary-Blue, #0061AF)
                 }
+
                 & > svg:nth-child(3) {
                     align-self: center;
                     color: var(--Hover-Blue, #468CC3);
@@ -581,4 +585,65 @@ body {
         }
     }
 
+}
+
+.section-promotion {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--Background-blue, #CDE0EF);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 86px 60px;
+        align-items: flex-start;
+
+        header {
+            h2 {
+                color: var(--Primary-Blue, #0061AF);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px; /* 142.857% */
+                margin: 0 0 8px;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 60px; /* 150% */
+                letter-spacing: -0.8px;
+                margin: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            display: flex;
+            padding: 12px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 16px;
+            background: var(--Primary-Blue, #0061AF);
+
+            color: var(--Primary-White, #FFF);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url('images/promotion/promotion.jpg') center / cover no-repeat;
+    }
 }
