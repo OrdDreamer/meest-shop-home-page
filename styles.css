@@ -10,8 +10,11 @@ body {
     --Background-blue: #CDE0EF;
 
     font-family: Montserrat, sans-serif;
-    box-sizing: border-box;
     color: var(--Primary-Black, #323232);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .container {
@@ -254,12 +257,14 @@ body {
             .user-menu-button, & > a {
                 color: var(--Primary-Blue, #0061AF);
                 position: relative;
-                /*height: 48px;*/
-                /*width: 48px;*/
 
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                svg {
+                    padding: 4px;
+                }
 
                 & > .badge {
                     position: absolute;
@@ -309,7 +314,9 @@ body {
 
         .button {
             text-decoration: none;
-            display: block;
+            display: flex;
+            gap: 8px;
+            align-items: center;
             white-space: nowrap;
             border-radius: 16px;
             background: var(--Primary-Blue, #0061AF);
@@ -390,7 +397,7 @@ body {
                     }
 
                     & > svg {
-                        padding: 8px;
+                        padding: 6px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -586,6 +593,179 @@ body {
     }
 
 }
+
+
+.sections-assortment {
+    margin-bottom: 124px;
+
+    h2 {
+        border-radius: 8px;
+        background: var(--Light-blue, #F4F9FD);
+        padding: 4px 8px;
+        width: auto;
+        margin: 0 0 8px;
+        max-width: max-content;
+
+        color: var(--Primary-Blue, #0061AF);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 142.857% */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        h3 {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 60px; /* 150% */
+            letter-spacing: -0.8px;
+            margin: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--Primary-Blue, #0061AF);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 150% */
+            padding: 12px 0;
+        }
+    }
+
+    .carousel {
+        margin-bottom: 48px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow: hidden;
+
+
+            li {
+                width: 228px;
+                min-width: 228px;
+                height: 228px;
+                border-radius: 16px;
+                overflow: hidden;
+                background: var(--Light-blue, #F4F9FD);
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                a {
+                    color: var(--Primary-White, #FFF);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 28px; /* 175% */
+                    text-decoration: none;
+                    padding: 8px 8px 8px 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 16px;
+                    background: rgba(0, 97, 175, 0.50);
+                    backdrop-filter: blur(4px);
+
+                    & > svg {
+                        min-width: 40px;
+                        padding: 8px;
+                        border-radius: 16px;
+                        border: 1px solid var(--Primary-White, #FFF);
+                    }
+                }
+
+                &:nth-child(1) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/1.png') center / cover no-repeat;
+                }
+
+                &:nth-child(2) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/2.png') center / cover no-repeat;
+                }
+
+                &:nth-child(3) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/3.png') center / cover no-repeat;
+                }
+
+                &:nth-child(4) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/4.png') center / cover no-repeat;
+                }
+
+                &:nth-child(5) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/5.png') center / cover no-repeat;
+                }
+
+                &:nth-child(6) {
+                    background: var(--Light-blue, #F4F9FD) url('images/assortment/6.png') center / cover no-repeat;
+                }
+
+            }
+        }
+    }
+
+    .carousel-controls {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        .progress-bar {
+            flex: 1;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--Light-blue, #F4F9FD);
+            &::after {
+                content: "";
+                display: block;
+                height: 100%;
+                border-radius: 2px;
+                width: 20%;
+                background-color: var(--Primary-Blue, #0061AF);
+            }
+        }
+
+        .carousel-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            button {
+                outline: none;
+                border: none;
+                background-color: transparent;
+                margin: 0;
+                padding: 0;
+
+                svg {
+                    padding: 8px;
+                    border-radius: 16px;
+                    border: 1px solid var(--Stroke-Gray, #DBE4F0);
+                    color: var(--Grey, #758295);
+                }
+
+                &:nth-child(2) svg {
+                    border: 1px solid var(--Primary-Blue, #0061AF);
+                    color: var(--Primary-Blue, #0061AF);
+                }
+            }
+        }
+    }
+}
+
 
 .section-promotion {
     border-radius: 16px;
