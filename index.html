@@ -42,9 +42,9 @@
             </ul>
         </nav>
 
-        <div class='language-country-switcher'>
+        <div class='global-language-country-switcher'>
             <div
-                    class='language-switcher'
+                    class='global-language-switcher'
                     role='group'
                     aria-label='Language selection'
             >
@@ -52,7 +52,7 @@
                 <a href='?lang=ru'>Ru</a>
             </div>
             <div
-                    class='country-switcher'
+                    class='global-country-switcher'
                     role='group'
                     aria-label='Country selection'
             >
@@ -647,6 +647,133 @@
                 </button>
             </div>
         </div>
+    </section>
+
+    <section class="container section-marketplaces">
+        <h2 class="section-title">Маркетплейси</h2>
+
+        <header>
+            <h3>Кращі магазини Азії - для вас</h3>
+            <div role="group" aria-label="Вибір країни походження товарів" class="country-switcher">
+                <button
+                        type="button"
+                        class="country-button active"
+                        aria-pressed="true"
+                        aria-label="Вибрано: Китай"
+                >
+                    <img
+                            src="images/flags/flag_cn.svg"
+                            alt="Прапор Китаю"
+                            class="country-flag"
+                            width="24"
+                            height="24"
+                    >
+                    <span>Китай</span>
+                </button>
+                <button
+                        type="button"
+                        class="country-button"
+                        aria-pressed="false"
+                        aria-label="Перейти до: Корея"
+                >
+                    <img
+                            src="images/flags/flag_kor.svg"
+                            alt="Прапор Кореї"
+                            class="country-flag"
+                            width="24"
+                            height="24"
+                    >
+                    <span>Корея</span>
+                </button>
+                <button
+                        type="button"
+                        class="country-button"
+                        aria-pressed="false"
+                        aria-label="Перейти до: Японія"
+                >
+                    <img
+                            src="images/flags/flag_jp.svg"
+                            alt="Прапор Японії"
+                            class="country-flag"
+                            width="24"
+                            height="24"
+                    >
+                    <span>Японія</span>
+                </button>
+            </div>
+        </header>
+
+        <ul class="marketplaces-list">
+            <li>
+                <a href="https://www.taobao.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Taobao">
+                    <img src="images/marketplaces/1.png" alt="Taobao.com">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinduoduo.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Pinduoduo">
+                    <img src="images/marketplaces/2.png" alt="Pinduoduo">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.1688.com" target="_blank" rel="noopener" aria-label="Перейти на сайт 1688">
+                    <img src="images/marketplaces/3.png" alt="1688">
+                </a>
+            </li>
+            <li>
+                <a href="https://weidian.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Weidian">
+                    <img src="images/marketplaces/4.png" alt="Weidian">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.poizon.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Poizon">
+                    <img src="images/marketplaces/5.png" alt="Poizon">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.biccamera.com" target="_blank" rel="noopener" aria-label="Перейти на сайт BicCamera">
+                    <img src="images/marketplaces/6.png" alt="Bic Camera">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.rakuten.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Rakuten">
+                    <img src="images/marketplaces/7.png" alt="Rakuten">
+                </a>
+            </li>
+            <li>
+                <a href="https://zozo.jp" target="_blank" rel="noopener" aria-label="Перейти на сайт Zozo">
+                    <img src="images/marketplaces/8.png" alt="Zozo">
+                </a>
+            </li>
+            <li>
+                <a href="https://global.gmarket.co.kr" target="_blank" rel="noopener" aria-label="Перейти на сайт Gmarket">
+                    <img src="images/marketplaces/9.png" alt="Gmarket">
+                </a>
+            </li>
+            <li>
+                <a href="https://sweetcorea.com" target="_blank" rel="noopener" aria-label="Перейти на сайт Sweet Corea">
+                    <img src="images/marketplaces/10.png" alt="SweetCorea">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.beautynetkorea.com" target="_blank" rel="noopener" aria-label="Перейти на сайт BeautyNetKorea">
+                    <img src="images/marketplaces/11.png" alt="BeautyNetKorea">
+                </a>
+            </li>
+            <li>
+                <span aria-label="Нові магазини скоро з’являться">Coming soon...</span>
+            </li>
+        </ul>
+
+        <p class="info-message">
+            Не знайшли потрібного магазину? Не спішіть засмучуватися — надішліть нам посилання на сторінку товару, а ми викупимо і доставимо його вам.
+        </p>
+
+        <a href="#" class="cta-button">
+            Почати замовляти
+            <svg width="24" height="24" aria-hidden="true">
+                <use href="images/icons.svg#icon-arrow_right"></use>
+            </svg>
+        </a>
     </section>
 </main>
 </body>
