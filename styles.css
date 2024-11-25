@@ -17,6 +17,10 @@ body {
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+}
+
 .container {
     max-width: 1360px;
     margin: auto;
@@ -47,6 +51,7 @@ body {
     width: auto;
     margin: 0;
     max-width: max-content;
+    max-height: max-content;
 
     color: var(--Primary-Blue, #0061AF);
     font-size: 14px;
@@ -583,6 +588,11 @@ body {
         p {
             margin: 0;
             max-width: 440px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 175% */
+            letter-spacing: -0.16px;
         }
     }
 
@@ -1041,7 +1051,7 @@ body {
 
 .section-marketplaces {
     margin-bottom: 124px;
-    
+
     header {
         display: flex;
         justify-content: space-between;
@@ -1116,6 +1126,118 @@ body {
         color: var(--Primary-White, #FFF);
         text-align: center;
         text-decoration: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+    }
+}
+
+.section-news {
+    margin-bottom: 120px;
+
+    h2 {
+        margin: 0 0 8px;
+    }
+
+    & > header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 32px;
+        margin-bottom: 48px;
+
+        h3 {
+            color: var(--Primary-Black, #323232);
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 60px; /* 150% */
+            letter-spacing: -0.8px;
+            max-width: 550px;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            max-width: 440px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 175% */
+            letter-spacing: -0.16px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 48px;
+
+        li {
+            a {
+                text-decoration: none;
+
+                figure {
+                    margin: 0 0 12px;
+
+                    img {
+                        border-radius: 16px;
+                        width: 100%;
+                        height: 280px;
+                        object-fit: cover;
+                    }
+                }
+
+                .article-info {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    gap: 8px;
+
+                    .article-date {
+                        margin: 0;
+                        color: var(--Grey, #8493A8);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px; /* 142.857% */
+                    }
+
+                    .article-title {
+                        margin: 0;
+                        grid-column: 1 / 3;
+                        overflow: hidden;
+                        color: var(--Primary-Black, #0A2432);
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 28px; /* 175% */
+                    }
+                }
+            }
+        }
+    }
+
+    .more-button {
+        width: max-content;
+        display: block;
+        text-decoration: none;
+        margin: 0 auto;
+        padding: 12px 24px;
+        min-width: 180px;
+        border-radius: 16px;
+        border: 1px solid var(--Primary-Blue, #0061AF);
+        background: none;
+        color: var(--Primary-Blue, #0061AF);
+        text-align: center;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
